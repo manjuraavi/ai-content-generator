@@ -1,0 +1,30 @@
+ # Core app
+streamlit==1.33.0
+
+# Web scraping
+requests==2.31.0
+beautifulsoup4==4.12.3
+praw==7.7.1        # For Reddit API
+quora-scraper==1.0.6  # Community-built Quora scraping library (basic)
+
+# OpenAI GPT-3.5
+openai
+
+# Image generation (Stable Diffusion)
+diffusers==0.27.2
+transformers==4.40.1
+torch==2.2.2
+accelerate==0.29.3
+safetensors==0.4.2
+huggingface_hub==0.20.3
+
+# File and image handling
+Pillow==10.3.0
+python-dotenv==1.0.1
+
+# Optional: progress bar, better logs
+tqdm==4.66.2
+loguru==0.7.2
+
+wikepedia==0.5.4  # For Wikipedia API
+
