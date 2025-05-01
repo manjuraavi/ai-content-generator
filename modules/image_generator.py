@@ -11,15 +11,15 @@ import os
 from huggingface_hub import login
 from modules import blog_generator
 from modules.scraper import scrape_all_sources
-from modules.utils import load_config, log
+from modules.utils import log
+import streamlit as st
 
-config = load_config()
 # hf_token = config.get("huggingface", {}).get("token")
 
 # Set your OpenAI API key
-openai_api_key = config.get("openai", {}).get("api_key")
+openai_api_key = st.secrets["openai"]["api_key"]
 
-image_key = config.get("image", {}).get("key")
+image_key = st.secrets["image"]["key"]
 if not openai_api_key:
     raise ValueError("OpenAI API key not found in config.")
 client = OpenAI(api_key=openai_api_key)

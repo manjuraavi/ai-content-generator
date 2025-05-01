@@ -6,14 +6,13 @@ import praw
 import re
 import urllib.parse
 import wikipedia
-from modules.utils import load_config, log
-
-config = load_config()
+import streamlit as st
+from modules.utils import log
 
 # Reddit Config
-REDDIT_CLIENT_ID = config["reddit"]["client_id"]
-REDDIT_CLIENT_SECRET = config["reddit"]["client_secret"]
-REDDIT_USER_AGENT = config["reddit"]["user_agent"]
+REDDIT_CLIENT_ID = st.secrets["reddit"]["client_id"]
+REDDIT_CLIENT_SECRET = st.secrets["reddit"]["client_secret"]
+REDDIT_USER_AGENT = st.secrets["reddit"]["user_agent"]
 
 # --- Reddit Scraper ---
 def scrape_reddit_posts(keyword, limit=10):

@@ -5,11 +5,6 @@ import os
 import re
 from datetime import datetime
 
-# Load API keys from config file
-def load_config(path="config/config.yaml"):
-    with open(path, "r") as f:
-        return yaml.safe_load(f)
-
 # Basic text cleaner
 def clean_text(text):
     text = re.sub(r"\s+", " ", text)          # Remove extra spaces/newlines

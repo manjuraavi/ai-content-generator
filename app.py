@@ -4,9 +4,7 @@ import openai
 import os
 
 # Load config
-config = utils.load_config()
-openai.api_key = config["openai"]["api_key"]
-blog_settings = config.get("blog_settings", {})
+openai.api_key = st.secrets["openai"]["api_key"]
 
 # Streamlit UI
 st.set_page_config(page_title="AI Content Generator", layout="centered")
